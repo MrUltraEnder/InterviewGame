@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Suelo
+    uniqueID: 2314006749
+    locked: 0
+  - name: Paredes
+    uniqueID: 1692262107
+    locked: 0
+  - name: Decos
+    uniqueID: 2383486301
+    locked: 0
+  - name: Player
+    uniqueID: 4150797469
+    locked: 0
