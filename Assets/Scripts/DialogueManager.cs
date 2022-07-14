@@ -56,4 +56,8 @@ private Animator animPanel;
     {
         animator.SetBool("isOpen", false);
     }
+    public void PanelCerrar()
+    {
+        animPanel.SetBool("isOpen", false);
+    }
 }

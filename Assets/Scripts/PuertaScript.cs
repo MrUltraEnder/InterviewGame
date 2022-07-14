@@ -6,6 +6,9 @@ public class PuertaScript : MonoBehaviour
 {
     private Animator anim;
     public bool Unlocked = false;
+    public ComputerScript Computer;
+
+    public int ChipsToUnlocked;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -20,7 +23,16 @@ public class PuertaScript : MonoBehaviour
         
         anim.SetBool("PlayerNearby", isPlayerNearby);
        
-           
+       Computer.unlocked = Unlocked;
+
+        if(isPlayerNearby && !Unlocked){
+            if(Input.GetKeyDown(KeyCode.E)){
+                if(FindObjectOfType<EconomyPlayer>().chips >= ChipsToUnlocked){
+                    FindObjectOfType<EconomyPlayer>().chips -= ChipsToUnlocked;
+                    Unlocked = true;
+                }
+            }
+        }
         
     }
 }
