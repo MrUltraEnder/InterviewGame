@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 6f;
     private Rigidbody2D rb;
+
+    private Animator animPanel;
     private Vector2 inputM;
 
 public Animator animatorP;
@@ -14,13 +16,18 @@ public Animator animatorP;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animPanel = GameObject.Find("Panel").GetComponent<Animator>();
     }
 
    
     void Update()
     {
+        if(!animPanel.GetBool("isOpen"))
+        {
+      
         inputM.x = Input.GetAxisRaw("Horizontal");
         inputM.y = Input.GetAxisRaw("Vertical");
+        }
         inputM.Normalize();
 
         rb.velocity = inputM * speed;

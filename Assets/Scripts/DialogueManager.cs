@@ -9,12 +9,13 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
-
+private Animator animPanel;
     public Animator animator;
    private Queue<string> dialogueLines;
 
     void Start()
     {
+        animPanel = GameObject.Find("Panel").GetComponent<Animator>();
         dialogueLines = new Queue<string>();
     }
 
@@ -27,7 +28,9 @@ public class DialogueManager : MonoBehaviour
             dialogueLines.Enqueue(line);
         }
         DisplayNextLine();
+        animPanel.SetBool("isOpen", true);
         animator.SetBool("isOpen", true);
+
     }
     public void DisplayNextLine()
     {

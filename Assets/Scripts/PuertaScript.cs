@@ -11,7 +11,7 @@ public class PuertaScript : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         anim.SetBool("Unlocked", Unlocked);
