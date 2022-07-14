@@ -17,7 +17,7 @@ public class PuertaScript : MonoBehaviour
         anim.SetBool("Unlocked", Unlocked);
         
         bool isPlayerNearby = Physics2D.OverlapCircle(transform.position, 2f, LayerMask.GetMask("Player"));
-        Debug.Log(isPlayerNearby);
+        
         anim.SetBool("PlayerNearby", isPlayerNearby);
        
            
