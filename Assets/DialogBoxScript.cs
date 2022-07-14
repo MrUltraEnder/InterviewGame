@@ -17,4 +17,8 @@ public class DialogBoxScript : MonoBehaviour
         Animator tiendaAnim = GameObject.Find("Tienda").GetComponent<Animator>();
         tiendaAnim.SetBool("isOpen", true);
     }
+    public void TiendaOff(){
+        Animator tiendaAnim = GameObject.Find("Tienda").GetComponent<Animator>();
+        tiendaAnim.SetBool("isOpen", false);
+    }
 }
