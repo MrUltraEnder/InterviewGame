@@ -9,16 +9,19 @@ public class ComputerScript : MonoBehaviour
     public int chipsProducidos = 0;
     public bool unlocked = false;
     private bool running;
+    public GameObject light;
+
+    public int radio;
     void Start()
     {
-      
+  
     }
 
   
     void Update()
     {
-
-        bool isPlayerNearby = Physics2D.OverlapCircle(transform.position, 3f, LayerMask.GetMask("Player"));
+light.SetActive(running);
+        bool isPlayerNearby = Physics2D.OverlapCircle(transform.position, radio, LayerMask.GetMask("Player"));
         if (isPlayerNearby)
         {
             
@@ -53,6 +56,6 @@ public class ComputerScript : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 3f);
+        Gizmos.DrawWireSphere(transform.position, radio);
     }
 }

@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba0dbeea99afec14281cd24d03d7e3aa, type: 3}
-  m_Name: Test
+  m_Name: Outfit 5
   m_EditorClassIdentifier: 
-  name: Test Cloth
-  description: 'this is a test '
-  ropa: {fileID: 697621555, guid: dd7e901a65dd8ed4c9710fc824bf4db9, type: 3}
-  cost: 100
-  sellPrice: 50
-  Id: 777
+  name: Master Chef
+  description: Save the universe as the best soldier or make the best omelette is
+    your choice
+  ropa: {fileID: 300885759, guid: f2201d001a88589468282a27c582c780, type: 3}
+  cost: 16000
+  sellPrice: 4500
+  Id: 5

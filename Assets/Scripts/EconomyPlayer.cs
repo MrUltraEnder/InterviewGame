@@ -9,6 +9,11 @@ public class EconomyPlayer : MonoBehaviour
     public int chips;
 
     private TextMeshProUGUI chipsText;
+
+    public RuntimeAnimatorController[] animatorControllers;
+    public Animator animator;
+
+    public int currentOutfit;
     void Start()
     {
         chipsText = GameObject.Find("ChipsText").GetComponent<TextMeshProUGUI>();
@@ -18,5 +23,7 @@ public class EconomyPlayer : MonoBehaviour
     void Update()
     {
         chipsText.text = chips.ToString();
-    }
+
+        animator.runtimeAnimatorController = animatorControllers[currentOutfit];
+}
 }

@@ -30,6 +30,9 @@ public class PuertaScript : MonoBehaviour
                 if(FindObjectOfType<EconomyPlayer>().chips >= ChipsToUnlocked){
                     FindObjectOfType<EconomyPlayer>().chips -= ChipsToUnlocked;
                     Unlocked = true;
+                }else{
+                    Animator ChipsText = GameObject.Find("ChipsText").GetComponent<Animator>();
+                    ChipsText.SetTrigger("pobre");
                 }
             }
         }
