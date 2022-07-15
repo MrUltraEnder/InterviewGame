@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba0dbeea99afec14281cd24d03d7e3aa, type: 3}
   m_Name: Outfit 6
   m_EditorClassIdentifier: 
-  name: Brutal Red
-  description: A classic choice for your first purchase
-  ropa: {fileID: 1888118351, guid: a5886424bdd5b0946a2972d034866ef9, type: 3}
-  cost: 1000
-  sellPrice: 500
-  Id: 1
+  name: Grimoire Freeman
+  description: Well, this is an obvious reference... to minions the movie
+  ropa: {fileID: 426360079, guid: 5fb6cfaf67d074148888eecbc2c4734e, type: 3}
+  cost: 32000
+  sellPrice: 9500
+  Id: 6

@@ -11,7 +11,7 @@ public class NPC : MonoBehaviour
 
 private void Update()
 {
-      bool isPlayerNearby = Physics2D.OverlapCircle(transform.position, 2f, LayerMask.GetMask("Player"));
+      bool isPlayerNearby = Physics2D.OverlapCircle(transform.position, 3f, LayerMask.GetMask("Player"));
       if(isPlayerNearby)
       {
           if(Input.GetKeyDown(KeyCode.E))
